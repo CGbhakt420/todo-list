@@ -3,22 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>To-Do List with Projects</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
+        <!-- Project Selector -->
+        <div class="project-section">
+            <h2>Projects</h2>
+            <input type="text" id="project-name" placeholder="New Project Name">
+            <button onclick="addProject()">Add Project</button>
+            <select id="project-select" onchange="switchProject()"></select>
+        </div>
+
         <div class="todo">
-            <h2>To-Do List <img src="baad me"></h2>
+            <h2>To-Do List <img src="images/checked.png"></h2>
             <div class="row">
-                <input type="text" id="input-box" placeholder="Add your text">
+                <input type="text" id="input-box" placeholder="Title">
+                <input type="text" id="description-box" placeholder="Description">
+                <input type="date" id="due-date">
+                <select id="priority">
+                    <option value="low">Low</option>
+                    <option value="medium">Medium</option>
+                    <option value="high">High</option>
+                </select>
+                <textarea id="notes-box" placeholder="Notes"></textarea>
                 <button onclick="addTask()">Add</button>
             </div>
 
             <ul id="list-container">
-               <!-- <li class="checked">Task 1</li>
-                <li>Task 2</li>
-                <li>Task 3</li>-->
+               <!-- Tasks will be inserted here -->
             </ul>
         </div>
         

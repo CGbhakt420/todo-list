@@ -1,72 +1,66 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: sans-serif;
 }
 
-.container{
+.container {
     width: 100%;
     min-height: 100vh;
     background: linear-gradient(135deg, coral, #faebd7);
     padding: 10px;
-    
-
 }
 
-.todo{
+.todo {
     width: 100%;
     max-width: 870px;
     background: white;
     padding: 40px 30px 70px;
     border-radius: 12px;
-    margin: 100px auto 20px
+    margin: 20px auto;
 }
 
-.todo h2{
+.todo h2 {
     color: coral;
     display: flex;
     align-items: center;
     margin-bottom: 20px;
 }
 
-.todo h2 img{
+.todo h2 img {
     width: 30px;
     margin-left: 10px;
 }
 
-.row{
+.row {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-radius: 30px;
-    padding-left: 20px;
+    flex-direction: column;
     margin-bottom: 25px;
     background: antiquewhite;
+    padding: 20px;
+    border-radius: 12px;
 }
 
-input{
-    flex: 1;
-    border: none;
-    outline: none;
-    background: transparent;
+.row input, .row textarea, .row select {
+    margin: 10px 0;
     padding: 10px;
-    font-weight: 400px;
+    border: none;
+    background: #f9f9f9;
+    border-radius: 5px;
 }
 
-button{
-    border: none;
-    outline: none;
-    padding: 16px 50px;
+button {
+    margin-top: 10px;
+    padding: 16px;
     background: coral;
     color: white;
+    border: none;
     cursor: pointer;
-    border-radius: 40px;
-    font-size: 16px;
-
+    border-radius: 10px;
 }
 
-ul li{
+ul li {
     list-style: none;
     font-size: 17px;
     padding: 12px 8px 12px 50px;
@@ -75,7 +69,7 @@ ul li{
     position: relative;
 }
 
-ul li::before{
+ul li::before {
     content: '';
     position: absolute;
     border-radius: 50%;
@@ -88,17 +82,16 @@ ul li::before{
     left: 8px;
 }
 
-ul li.checked{
+ul li.checked {
     color: #555;
     text-decoration: line-through;
-
 }
 
-ul li.checked::before{
+ul li.checked::before {
     background-image: url(images/checked.png);
 }
 
-ul li span{
+ul li span {
     position: absolute;
     right: 0;
     top: 5px;
@@ -111,7 +104,22 @@ ul li span{
     border-radius: 50%;
 }
 
-ul li span:hover{
+ul li span:hover {
     background-color: #edeef0;
-
 }
+
+.project-section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+#project-name, #project-select{
+    background: wheat;
+    padding: 12px;
+    border-radius: 8px;
+}
+
+
+
